@@ -32,7 +32,7 @@
                 var calculation = (amount / (1-(tax/100)))*(12/(interest/100))
                 if(interest > 0 && amount > 0)
                 {
-                    document.getElementById('debug').innerHTML = currency + "<br>" + amount + "<br>" + interest + "<br>" + tax + "<br>" + calculation.toFixed(2);
+                    //document.getElementById('debug').innerHTML = currency + "<br>" + amount + "<br>" + interest + "<br>" + tax + "<br>" + calculation.toFixed(2);
                     if(currency === "")
                     {
                         document.getElementById('adb').innerHTML = new Intl.NumberFormat('en-US').format(calculation);
@@ -62,14 +62,30 @@
         <br/>
         </div>
         <div>
+
+        </div>
+        <div>
             <h5>You would need an Average Daily Balance of</h5>
             <h3 id="adb">
                 ???
             </h3>
             <h5>in your bank savings account.</h5>
-            <h3>Debug:</h3>
-            <div id="debug">
-
+            <br>
+            <br>
+            <br>
+            <div>
+                <h4>
+                    What is this about?
+                </h4>
+                <p>
+                    People often wonder how people get a sufficient amount of disposable income that they can use for sending Super Chats, donations, and tips to various online creators. Though the most obvious answer would be having a stable income, taking advantage of the financial system is also a good idea too. That may include activities such as saving your money in a bank with a high interest rate as well as investing in funds or stocks. This program tackles on one of them. By placing your money in a high interest savings account, it is possible to secure your money and at the same time grow it to prevent against steadily rising inflation rates. Or, to do the more sensible thing which is to spend that free bank money on Super Chats.
+                </p>
+                <p>
+                    To reverse the calculation of the income generated from savings interest, this is calculated through the formula<br><i><b>(SC amount / (100%-Tax Rate))*(12/Interest Rate p.a.)</b></i>
+                </p>
+                <p>
+                    The idea came from this <a href="https://twitter.com/Madekuji_san/status/1365704546933084164">tweet</a>.
+                </p>
             </div>
         </div>
     </body>
